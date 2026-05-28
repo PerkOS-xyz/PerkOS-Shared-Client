@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.tgz
+.env
+.env.local
+coverage/
+.DS_Store
+tsconfig.tsbuildinfo
