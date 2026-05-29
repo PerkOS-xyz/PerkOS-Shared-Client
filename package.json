@@ -1,6 +1,6 @@
 {
   "name": "@perkos/shared-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared client lib for PerkOS apps: wallet auth, API client, Firebase init, React hooks.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -35,7 +35,7 @@
   },
   "peerDependencies": {
     "@perkos/shared-types": "^0.1.0",
-    "firebase": "^10 || ^11",
+    "firebase": "^10 || ^11 || ^12",
     "react": "^18 || ^19",
     "viem": "^2"
   },

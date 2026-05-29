@@ -4,6 +4,26 @@ Semver: minor bumps for additive APIs (new export, new optional argument),
 patch for fixes that don't change call signatures, major for any breaking
 change to existing exports.
 
+## 0.1.1 — 2026-05-29
+
+### Changed
+
+- **Peer dependency `firebase` widened to `^10 || ^11 || ^12`** so consumers
+  on the current `firebase@^12` release line (PerkOS App, PerkOS-Admin) no
+  longer need `--legacy-peer-deps` on `npm install` / `npm ci`. The shared
+  client only uses the stable `firebase/{app,auth,firestore}` surface
+  (`initializeApp`, `getApp`, `getApps`, `getAuth`, `getFirestore`,
+  `onAuthStateChanged`, `signInWithCustomToken`, `signOut`) which is
+  unchanged across the three majors — runtime behavior is identical to
+  0.1.0.
+
+### Notes
+
+- No public API changes.
+- Consumers pinning `^0.1.0` will pick up this release automatically on
+  the next install. To drop `--legacy-peer-deps` from their Dockerfiles,
+  rebuild against `^0.1.1` or wider.
+
 ## 0.1.0 — 2026-05-28
 
 Initial release. Shared client lib for PerkOS apps: wallet auth, API client,
